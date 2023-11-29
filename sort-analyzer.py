@@ -37,21 +37,21 @@ fewUniqueData = loadDataArray("data-files/few-unique-values.txt")
 # print(f"Bubble Sort Random Data: {endTime - startTime} seconds")
 
 
-# startTime = time.time()
-# def selectionSort(anArray):
-#     for fillSlot in range(len(anArray) - 1):
-#         # Find position of minimum element
-#         minPosition = fillSlot
-#         for i in range(fillSlot + 1, len(anArray)):
-#             if anArray[i] < anArray[minPosition]:
-#                 minPosition = i
-#         # Swap fillSot and the minPosition
-#         anArray[fillSlot], anArray[minPosition] = anArray[minPosition], anArray[fillSlot]
-# selectionSort(reversedData)
-# endTime = time.time()
-# total_Time= endTime - startTime
-# print(f"Selection Sort Random Data: {total_Time} seconds")
+startTime = time.time()
+def selectionSort(anArray):
+    for fillSlot in range(len(anArray) - 1):
+        # Find position of minimum element
+        minPosition = fillSlot
+        for i in range(fillSlot + 1, len(anArray)):
+            if anArray[i] < anArray[minPosition]:
+                minPosition = i
+        # Swap fillSot and the minPosition
+        anArray[fillSlot], anArray[minPosition] = anArray[minPosition], anArray[fillSlot]
+selectionSort(nearlySortedData)
+endTime = time.time()
+total_Time= endTime - startTime
+print(f"Selection Sort Random Data: {total_Time} seconds")
 
-result = (2.4880409240722656 +  2.4667487144470215 + 2.487828016281128)/3
+# result = (2.2.108363151550293 +  2.136706829071045 +  2.27531361579895)/3
 
-print(f"\nThe average time is: {result} seconds")
+# print(f"\nThe average time is: {result} seconds")
